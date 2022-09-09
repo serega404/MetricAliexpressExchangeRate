@@ -174,7 +174,7 @@
               "mode": "off"
             }
           },
-          "decimals": 1,
+          "decimals": 2,
           "mappings": [],
           "max": 100,
           "min": 40,
@@ -224,6 +224,7 @@
           "refId": "A"
         }
       ],
+      "timeFrom": "24h",
       "title": "Курс доллара",
       "type": "timeseries"
     }
@@ -245,6 +246,6 @@
   "timezone": "",
   "title": "Курс AliExpress",
   "uid": "ghA0PTGVk",
-  "version": 10,
+  "version": 12,
   "weekStart": ""
 }
