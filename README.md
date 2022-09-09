@@ -6,7 +6,7 @@
 
 Для сбора метрик я использую [Victoria Metric](https://github.com/VictoriaMetrics/VictoriaMetrics) в режиме CSV
 
-Особая благадарность сайту cbr-xml-daily.ru за предоставление данных с сайта cbr.ru
+Особая благадарность сайту [cbr-xml-daily.ru](https://cbr-xml-daily.ru) за предоставление данных с сайта [cbr.ru](https://cbr.ru)
 
 ### Запуск через Cron
 
@@ -17,6 +17,7 @@
 ### Отображение в Grafana
 
 Файл для импорта: [grafana.json](./grafana.json)
+
 <img src="./grafana.png" width="400" height="300" />
 
 ### Библиотеки
