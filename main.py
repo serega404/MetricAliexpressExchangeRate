@@ -20,7 +20,7 @@ if (site.status_code != 200):
 
 soup = BeautifulSoup(site.text, "html.parser")
 
-for tag in soup.find_all("span", class_="product-price-current"):
+for tag in soup.find_all("div", class_="snow-price_SnowPrice__mainS__ugww0l"):
     KursAli = (''.join(x for x in tag.text if (x.isdigit() or x == ','))).replace(',','.')
     
 print("Курс Ali: " + KursAli)
@@ -35,6 +35,8 @@ if (site.status_code != 200):
 
 KursCBRF = str(json.loads(site.text)["Valute"]["USD"]["Value"])
 print("Курс ЦБ РФ: " + KursCBRF)
+
+print("Разница Ali и CBRF", round(max(float(KursAli), float(KursCBRF)) - min(float(KursAli), float(KursCBRF)), 2))
 
 # Send metrics ↓
 
@@ -53,3 +55,10 @@ if KursAli != '':
         print("Не удалось отправить метрику: " + str(x.status_code))
 else:
     print("Курс Али пуст")
+
+if KursCBRF != '' and KursAli != '':
+    x = requests.post(url, "Diff Ali CBRF," + str(round(max(float(KursAli), float(KursCBRF)) - min(float(KursAli), float(KursCBRF)), 2)))
+    if (x.status_code != 200 and x.status_code != 204):
+        print("Не удалось отправить метрику: " + str(x.status_code))
+else:
+    print("Один из курсов пуст")
