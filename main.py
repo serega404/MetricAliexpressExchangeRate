@@ -20,9 +20,14 @@ if (site.status_code != 200):
 
 soup = BeautifulSoup(site.text, "html.parser")
 
-for tag in soup.find_all("div", class_="snow-price_SnowPrice__mainS__ugww0l"):
-    KursAli = (''.join(x for x in tag.text if (x.isdigit() or x == ','))).replace(',','.')
-    
+tmpstring = " "*20
+for tag in soup.find_all("div"):
+    if "руб." in tag.text:
+        if len(tmpstring) > len(tag.text):
+            tmpstring = tag.text
+
+print(tmpstring)
+KursAli = (''.join(x for x in tmpstring if (x.isdigit() or x == ','))).replace(',','.')
 print("Курс Ali: " + KursAli)
 
 # ЦБ РФ
