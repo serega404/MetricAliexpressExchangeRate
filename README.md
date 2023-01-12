@@ -20,6 +20,19 @@
 
 <img src="./grafana.png" width="400" height="300" />
 
+### Запуск в Docker
+
+``` Docker
+docker run -d --name MetricAliexpressExchangeRate \
+    --restart=always \
+    -e METRIC_SERVER_URL='http(s)://<IP_ADDR>:<PORT>/' \
+    repo/container:latest
+```
+
+#### Дополнительные переменные среды:
+* `CBRF_APISITE_URL`
+* `ALI1USD_PAGE_URL`
+
 ### Библиотеки
 
 * [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/)

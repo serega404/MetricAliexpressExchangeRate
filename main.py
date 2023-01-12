@@ -1,11 +1,11 @@
-import requests, re, json
+import requests, re, json, os
 from bs4 import BeautifulSoup
 
 # Config
 
-Ali1USDPageURL = 'https://aliexpress.ru/item/32892046259.html'
-CBRFApiSiteURL = 'https://www.cbr-xml-daily.ru/daily_json.js'
-MetricServerURL = 'http://192.168.0.100:8428/'
+Ali1USDPageURL = os.environ.get('ALI1USD_PAGE_URL', 'https://aliexpress.ru/item/32892046259.html')
+CBRFApiSiteURL = os.environ.get('CBRF_APISITE_URL', 'https://www.cbr-xml-daily.ru/daily_json.js')
+MetricServerURL = os.environ.get('METRIC_SERVER_URL', 'http://192.168.0.100:8428/')
 
 KursAli = ""
 KursCBRF = ""
