@@ -26,7 +26,7 @@
 docker run -d --name MetricAliexpressExchangeRate \
     --restart=always \
     -e METRIC_SERVER_URL='http(s)://<IP_ADDR>:<PORT>/' \
-    repo/container:latest
+    ghcr.io/serega404/metricaliexpressexchangerate:main
 ```
 
 #### Дополнительные переменные среды:
