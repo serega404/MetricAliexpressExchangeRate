@@ -18,7 +18,7 @@ if (site.status_code != 200):
     print("Ali request error: " + str(site.status_code))
     exit()
 
-soup = BeautifulSoup(site.text, "html.parser")
+soup = BeautifulSoup(site.content, "html.parser")
 
 tmpstring = " "*20
 for tag in soup.find_all("div"):
