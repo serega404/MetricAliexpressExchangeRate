@@ -1,6 +1,6 @@
 # MetricAliexpressExchangeRate
 
-[![MIT License](https://img.shields.io/github/license/serega404/EasyESPRealy)](https://github.com/serega404/MetricAliexpressExchangeRate)
+[![MIT License](https://img.shields.io/github/license/serega404/MetricAliexpressExchangeRate)](https://github.com/serega404/MetricAliexpressExchangeRate)
 
 Экспортер курса Aliexpress и ЦБ РФ
 
@@ -35,6 +35,7 @@ docker run -d --name MetricAliexpressExchangeRate \
 
 ### Библиотеки
 
+* [Requests](https://requests.readthedocs.io/en/latest/)
 * [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/)
 
 ### Лицензия
