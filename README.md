@@ -1,6 +1,6 @@
 # MetricAliexpressExchangeRate
 
-[![MIT License](https://img.shields.io/github/license/serega404/MetricAliexpressExchangeRate)](https://github.com/serega404/MetricAliexpressExchangeRate)
+[![MIT License](https://img.shields.io/github/license/serega404/MetricAliexpressExchangeRate)](https://github.com/serega404/MetricAliexpressExchangeRate/blob/main/LICENSE)
 
 Экспортер курса Aliexpress и ЦБ РФ
 
